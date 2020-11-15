@@ -1,0 +1,13 @@
+{
+  "monitoring_uri": "https://www.python.org",
+  "regex_pattern": "python",
+  "interval": 5,
+  "transport": "kafka",
+  "metric_collector_type": "http",
+  "bootstrap.servers": "localhost:23908",
+  "kafka_topic": "httpwatcher",
+  "ssl.ca.location": "/Users/mghosal/Downloads/ca.pem",
+  "ssl.certificate.location": "/Users/mghosal/Downloads/service.cert",
+  "ssl.key.location": "/Users/mghosal/Downloads/service.key",
+  "security.protocola": "SSL"
+}

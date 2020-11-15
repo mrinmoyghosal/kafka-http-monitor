@@ -1,0 +1,14 @@
+{
+  "db_uri": "postgres://user:pass@dbhost:dbport/defaultdb?sslmode=require",
+  "transport": "kafka",
+  "bootstrap.servers": "localhost",
+  "kafka_topic": "httpwatcher",
+  "auto.offset.reset": "earliest",
+  "group.id": "my-group",
+  "enable.auto.commit": "true",
+  "auto.commit.interval.ms": "500",
+  "ssl.ca.location": "/Users/mghosal/Downloads/ca.pem",
+  "ssl.certificate.location": "/Users/mghosal/Downloads/service.cert",
+  "ssl.key.location": "/Users/mghosal/Downloads/service.key",
+  "security.protocol": "SSL"
+}
