@@ -1,5 +1,4 @@
 import json
-import time
 
 from postgres import Postgres
 
@@ -31,6 +30,6 @@ class PgDatabaseClient(DatabaseClient):
             msg = json.loads(data)
             with self.db_client.get_cursor() as cursor:
                 cursor.run(SQLQueries.INSERT_DATA, msg)
-            logger.info(f"Data saved successfully at - {time.monotonic()}")
+            logger.info(f"Data saved successfully")
         except Exception as e:
             logger.error(f"Cannot save data to db, following error occurred {e}")

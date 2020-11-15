@@ -1,8 +1,14 @@
 import pytest
 from contextlib import contextmanager
 
-from service.util import load_config, CONSTANTS, InvalidConfigException, load_metric_collector_config, \
-    load_kafka_config, load_database_config
+from service.util import (
+    load_config,
+    CONSTANTS,
+    InvalidConfigException,
+    load_metric_collector_config,
+    load_kafka_config,
+    load_database_config,
+)
 
 
 @contextmanager

@@ -1,7 +1,7 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-name: Python application
+name: build
 
 on:
   push:
@@ -22,7 +22,15 @@ jobs:
         python-version: 3.9
     - name: Install dependencies
       run: |
-        sudo apt-get update && sudo apt-get install -y librdkafka-dev=1.4.2-1
+        sudo apt-get update && sudo apt-get install -y git gcc build-essential
+        git clone https://github.com/edenhill/librdkafka
+        cd librdkafka
+        ./configure
+        sudo make
+        sudo make install
+        sudo ldconfig
+        cd ..
+        rm -rf librdkafka
         python -m pip install --upgrade pip
         pip install poetry==1.1.4
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi

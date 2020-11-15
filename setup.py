@@ -6,6 +6,7 @@ with open("README.md", "r") as fh:
 setuptools.setup(
     name='kafka-http-monitor',
     version='0.1.0',
+    description=long_description,
     packages=setuptools.find_packages(exclude=["tests"]),
     include_package_data=True,
     python_requires=">=3.9",
@@ -14,6 +15,9 @@ setuptools.setup(
         'postgres>=3.0.0',
         'APScheduler>=3.6.3',
         'aiohttp>=3.7.2'
+        'aiohttp>=3.7.2',
+        'jsonschema>=3.2.0',
+        'argparse>=1.4.0'
     ],
     entry_points={
         'console_scripts': [
